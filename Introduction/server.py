@@ -10,8 +10,10 @@ s.bind((socket.gethostname(), 12000))
 
 # Prepare for number of connection (queue)
 s.listen(5)
+print(f"Server is ready!")
 
 while True:
 	clientSocket, address = s.accept()
 	print(f"Connection from {address} has been establish!")
 	clientSocket.send(bytes("Welcome to the server!", "utf-8"))
+	clientSocket.close()
