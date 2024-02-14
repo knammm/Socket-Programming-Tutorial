@@ -1,0 +1,22 @@
+======================================================================================
+PS D:\My projects\Socket Programming Tutorial\Introduction> py -3.10-64 .\server.py
+Connection from ('192.168.1.11', 53063) has been establish!
+Connection from ('192.168.1.11', 53065) has been establish!
+Connection from ('192.168.1.11', 53066) has been establish!
+Connection from ('192.168.1.11', 53067) has been establish!
+Connection from ('192.168.1.11', 53068) has been establish!
+Connection from ('192.168.1.11', 53069) has been establish!
+
+======================================================================================
+PS D:\My projects\Socket Programming Tutorial\Introduction> py -3.10-64 .\client.py
+Welcome to the server!
+PS D:\My projects\Socket Programming Tutorial\Introduction> py -3.10-64 .\client.py
+Welcome to the server!
+PS D:\My projects\Socket Programming Tutorial\Introduction> py -3.10-64 .\client.py
+Welcome to the server!
+PS D:\My projects\Socket Programming Tutorial\Introduction> py -3.10-64 .\client.py
+Welcome to the server!
+PS D:\My projects\Socket Programming Tutorial\Introduction> py -3.10-64 .\client.py
+Welcome to the server!
+PS D:\My projects\Socket Programming Tutorial\Introduction> py -3.10-64 .\client.py
+Welcome to the server!
