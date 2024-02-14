@@ -1,0 +1,29 @@
+============================================================================================
+olkmphy@knammm MINGW64 /d/My projects/Socket Programming Tutorial/Uppercase/UDP (main)
+$ py -3.10-64 server.py
+The server is ready !
+Receive request from ('192.168.1.11', 55770)
+Receive request from ('192.168.1.11', 55170)
+Receive request from ('192.168.1.11', 56093)
+Receive request from ('192.168.1.11', 58826)
+
+============================================================================================
+olkmphy@knammm MINGW64 /d/My projects/Socket Programming Tutorial/Uppercase/UDP (main)
+$ py -3.10-64 client.py
+Input lowercase sentence: Nguyen Khanh Nam
+NGUYEN KHANH NAM
+
+olkmphy@knammm MINGW64 /d/My projects/Socket Programming Tutorial/Uppercase/UDP (main)
+$ py -3.10-64 client.py
+Input lowercase sentence: asdfghjkl
+ASDFGHJKL
+
+olkmphy@knammm MINGW64 /d/My projects/Socket Programming Tutorial/Uppercase/UDP (main)
+$ py -3.10-64 client.py
+Input lowercase sentence: TEST
+TEST
+
+olkmphy@knammm MINGW64 /d/My projects/Socket Programming Tutorial/Uppercase/UDP (main)
+$ py -3.10-64 client.py
+Input lowercase sentence: HeLlO wOrLd !
+HELLO WORLD !
