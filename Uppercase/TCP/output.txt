@@ -1,0 +1,23 @@
+============================================================================================
+olkmphy@knammm MINGW64 /d/My projects/Socket Programming Tutorial/Uppercase/TCP (main)
+$ py -3.10-64 server.py
+Server is ready !
+Receive request from ('192.168.1.11', 53877)
+Receive request from ('192.168.1.11', 53878)
+Receive request from ('192.168.1.11', 53887)
+
+============================================================================================
+olkmphy@knammm MINGW64 /d/My projects/Socket Programming Tutorial/Uppercase/TCP (main)
+$ py -3.10-64 client.py
+Enter your input: testing text
+Server message: TESTING TEXT
+
+olkmphy@knammm MINGW64 /d/My projects/Socket Programming Tutorial/Uppercase/TCP (main)
+$ py -3.10-64 client.py
+Enter your input: Ho Chi Minh city University of Technology
+Server message: HO CHI MINH CITY UNIVERSITY OF TECHNOLOGY
+
+olkmphy@knammm MINGW64 /d/My projects/Socket Programming Tutorial/Uppercase/TCP (main)
+$ py -3.10-64 client.py
+Enter your input: computer network
+Server message: COMPUTER NETWORK
