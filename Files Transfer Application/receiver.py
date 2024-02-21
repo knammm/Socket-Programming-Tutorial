@@ -14,6 +14,7 @@ client, addr = server.accept()
 
 # Receiving file name and file size
 fileName = client.recv(1024).decode()
+
 fileSize = client.recv(1024).decode()
 print("File size:" + fileSize)
 
