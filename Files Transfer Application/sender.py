@@ -7,14 +7,21 @@ serverPort = 12000
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((serverName, serverPort))
 
-# Open file in mode read byte
-myFile = open("D:\\My projects\\Socket Programming Tutorial\\Files Transfer Application\\Random Files\\randomFile.txt", "rb")
-fileSize = os.path.getsize("D:\\My projects\\Socket Programming Tutorial\\Files Transfer Application\\Random Files\\randomFile.txt")
+path = "D:\\My projects\\Socket Programming Tutorial\\Files Transfer Application\\Random Files\\"
+fileName = input("Enter the file's name: ")
 
-print(fileSize)
+# Open file in mode read byte
+myFile = open(path + fileName, "rb")
+fileSize = os.path.getsize(path + fileName)
+
+# print(fileSize)
+dotIndex = fileName.find(".")
+tail = fileName[dotIndex:]
 
 # Sending newFile name and its size
-newFileName = "ReceiveText.txt"
+newFileName = "Receive_File" + tail
+# print(newFileName)
+
 client.send(newFileName.encode())
 client.send(str(fileSize).encode())
 
