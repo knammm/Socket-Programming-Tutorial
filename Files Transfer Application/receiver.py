@@ -16,7 +16,8 @@ client, addr = server.accept()
 fileName = client.recv(1024).decode()
 
 fileSize = client.recv(1024).decode()
-print("File size:" + fileSize)
+
+# print("File size:" + fileSize)
 
 receiveFile = open(fileName, "wb")
 file_bytes = b""
@@ -42,7 +43,14 @@ receiveFile.write(new_file_bytes)
 receiveFile.close()
 
 # Move file to the appropriate directory
-# os.replace(fileName, "D:\\My projects\\Socket Programming Tutorial\\Files Transfer Application\\Files Destination\\")
+source_file = fileName
+destination_dir = "D:\\My projects\\Socket Programming Tutorial\\Files Transfer Application\\Files Destination\\"
+
+try:
+    os.replace(source_file, os.path.join(destination_dir, source_file))
+    print("\nFile moved successfully.")
+except PermissionError as e:
+    print(f"\nError: {e}")
 
 client.close()
 server.close()
