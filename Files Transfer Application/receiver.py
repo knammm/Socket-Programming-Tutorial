@@ -14,7 +14,8 @@ client, addr = server.accept()
 
 # Receiving file name and file size
 fileName = client.recv(1024).decode()
-fileSize = 94
+fileSize = client.recv(1024).decode()
+print("File size:" + fileSize)
 
 receiveFile = open(fileName, "wb")
 file_bytes = b""
@@ -31,12 +32,16 @@ while not done:
 		file_bytes += data
 	progress.update(1024)
 
+# Remove <END>
+endIndex = file_bytes.find(b"<END>")
+new_file_bytes = file_bytes[0:endIndex]
+
 # Write the content to the file
-receiveFile.write(file_bytes)
+receiveFile.write(new_file_bytes)
 receiveFile.close()
 
 # Move file to the appropriate directory
-os.replace(fileName, "D:\\My projects\\Socket Programming Tutorial\\Files Transfer Application\\Files Destination")
+# os.replace(fileName, "D:\\My projects\\Socket Programming Tutorial\\Files Transfer Application\\Files Destination\\")
 
 client.close()
 server.close()

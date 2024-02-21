@@ -14,8 +14,9 @@ fileSize = os.path.getsize("D:\\My projects\\Socket Programming Tutorial\\Files 
 print(fileSize)
 
 # Sending newFile name and its size
-client.send("ReceiveText.txt".encode())
-# client.send(str(fileSize).encode())
+newFileName = "ReceiveText.txt"
+client.send(newFileName.encode())
+client.send(str(fileSize).encode())
 
 # Read the data of the file and send all those data
 data = myFile.read()
