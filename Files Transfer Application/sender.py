@@ -1,5 +1,6 @@
 import socket
 import os
+import sys
 
 serverName = socket.gethostname()
 serverPort = 12000
@@ -8,7 +9,17 @@ client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((serverName, serverPort))
 
 path = "D:\\My projects\\Socket Programming Tutorial\\Files Transfer Application\\Random Files\\"
+file_names = os.listdir(path)
+
+print(f"Existing files: " + str(file_names))
+
 fileName = input("Enter the file's name: ")
+
+# Handling unexisting file
+if fileName not in file_names:
+	print("\nThe file does not exist !")
+	client.close()
+	sys.exit()
 
 # Open file in mode read byte
 myFile = open(path + fileName, "rb")
